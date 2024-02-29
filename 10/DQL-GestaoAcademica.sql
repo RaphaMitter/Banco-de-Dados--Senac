@@ -57,4 +57,24 @@ SELECT *
 FROM professor
 WHERE Especializacao LIKE '%Tecnologia%';
 
+-- Exercício: Selecione todos os curso que terminam com "Medicina" ou comecem com a letra "D" 
+SELECT * 
+FROM curso
+WHERE Nome LIKE '%Medicina' OR Nome LIKE 'D%';
+
+-- Utilizando o DISTINCT para Obter Valores Distintos
+SELECT DISTINCT especializacao FROM professor;
+
+-- Exemplo1: Combinar dados de aluno e matricula INNER JOIN
+SELECT aluno.nome, aluno.cpf, matricula.DataMatricula
+FROM aluno
+INNER JOIN matricula ON aluno.Matricula = matricula.Aluno_ID;
+-- Exemplo2: Combinar dados de professor e disciplina usando INNER JOIN
+SELECT professor.nome, disciplina.nome
+FROM professor
+INNER JOIN professores_disciplinas ON professor.id = professores_disciplinas.professor_id
+INNER JOIN disciplina ON professores_disciplinas.Disciplina_ID = disciplina.ID;
+
+
+
 
