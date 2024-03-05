@@ -34,6 +34,10 @@ ALTER TABLE cidades
 ADD COLUMN Prefeito_ID INT,
 ADD FOREIGN KEY (Prefeito_ID) REFERENCES Prefeito(ID);
 
-
+-- Exibir o nome da cidade e o nome do prefeito
+SELECT cidades.Nome AS Cidade,Prefeito.Nome AS Prefeito, Estado.Uf
+FROM cidades
+LEFT JOIN Prefeito ON cidades.Prefeito_ID = Prefeito.ID
+INNER JOIN Estado ON cidades.Estado_ID = Estado.ID;
 
 
