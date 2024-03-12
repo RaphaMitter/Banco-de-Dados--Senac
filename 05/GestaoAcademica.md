@@ -13,10 +13,9 @@ Com base no contexto apresentado, identifique as entidades e seus relacionamento
 Entidades:
 - Curso
 - Aluno
-- Professor
 - Disciplina
-- Matricula
-
+- Professor
+- Matrícula
 
 Relacionamentos
 - Um Aluno se matricula em um ou mais Cursos
@@ -24,9 +23,9 @@ Relacionamentos
 - Um Curso é composto por várias Disciplinas
 - Uma Disciplina pode pertencer a diferentes Cursos
 - Um Professor leciona uma ou mais Disciplinas
-- Uma Disciplina pode ser leconada por um ou mais Professores
-- Um Aluno realiza uma ou mais Matriculas
-- Uma Matricula rstá associada a um Aluno e um Curso
+- Uma Disciplina pode ser lecionada por um ou mais Professores
+- Um Aluno realiza uma ou mais Matrículas
+- Uma Matrícula está associada a um Aluno e um Curso
 
 Agora, com base nessas entidades e relacionamentos, desenvolva um modelo conceitual no DrawIO representando visualmente a estrutura e as interações entre esses elementos.
 
@@ -34,23 +33,25 @@ Agora, com base nessas entidades e relacionamentos, desenvolva um modelo conceit
 
 A transição do modelo conceitual para o modelo lógico envolve a representação mais específica das entidades, atributos, relacionamentos e chaves no contexto de um Sistema de Gestão Acadêmica.
 
-Tabelas:
+### Tabelas:
+
 Aluno:
 - Matricula (PK), Nome
 Curso:
 - ID (PK), Nome
 Disciplina:
 - ID (PK), Nome
+Professor:
+- ID (PK), Nome, Especializacao
 Matricula:
-- Aluno_ID (FK), Curso_ID (FK)
+- Aluno_ID (FK), Curso_ID (FK), Data
 Cursos_Disciplinas:
-- Curso_ID (FK), Disciplina_ID (FK)
-Professor_Disciplinas:
-- Professor_ID (FK), DIsciplina_ID (FK)
-
+- Curso_ID (FK), Disciplina_ID(FK)
+Professor_Disciplina:
+- Professor_ID (FK), Disciplina_ID (FK)
 
 Chaves Primárias e Estrangeiras:
-- Relacionado nas tabelas
+ - Relacionado nas tabelas!
 
 Agora, com base nessas entidades e relacionamentos, desenvolva um modelo lógico no DrawIO representando visualmente a estrutura completas e as interações entre esses elementos, com seus campos chave refletindo essas interações e seus atributos definidos.
 

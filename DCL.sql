@@ -1,0 +1,1 @@
+SELECT USER, Host FROM mysql.user; 
